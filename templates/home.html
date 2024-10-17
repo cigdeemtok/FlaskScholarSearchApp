@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <title>Scholar Search</title>
+</head>
+<body>
+    <div class="search">
+        <form action="/" method="post">
+            <input type="text" name = "searchedWord" placeholder="Arama kelimesini giriniz" required>
+            <div class="buttonHolder">
+                <button type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <ul class="results">
+            {% for article in articles %}
+            <li class="article">
+                <h3 class="article_name"><a href="{{ url_for('views.search',article_id=article['_id'])}}">{{article['name']}}</a></h3>
+                <p class="pdf_link"><a href="{{article['pdfLink']}}">[PDF]</a></p>
+                <p class="authors">
+                    <b>{{article['authors']}}</b>
+                </p>
+                <p class="article_info">{{article['ozet']}}</p>
+                <p class="article_abstract">{{article['yayimciAdi']}}</p>
+                <p class="article_bottom">{{article['yayimTarihi']}}</p>
+            </li>
+            <hr>
+            {% endfor %}
+        </ul>
+       
+    </div>
+</body>
+</html>

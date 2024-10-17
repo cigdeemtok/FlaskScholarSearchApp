@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <title>{{ article['searchedWord'] }}</title>
+</head>
+<body>
+    <div class="detail-container">
+        
+        <div class="details">
+            <div class="article-title"><b>{{article['name']}}</b></h2>
+                <div class="article-metadata">
+                    <ul>
+                        <li><p class="metadata"><b>{{article['authors']}}</b></p></li>
+                        <li><p class="metadata">{{article['yayimTarihi']}}</p> </li>
+                        <li> <p class="metadata">{{article['tur']}}</p></li>
+                        <li> <p class="metadata">{{article['yayimciAdi']}}</p></li>
+                        <li> <p class="metadata">{{article['doiNum']}}</p></li>
+                        <li><p class="metadata">{{article['alintiSayisi']}}</p></li>
+                    </ul>
+                   
+                </div>
+                <div class="abstract">
+                    <h2>Abstract</h2>
+                    <p>{{article['ozet']}}</p>
+                </div>
+                <div class="keywords">
+                    <p><b>{{article['keywords']}}</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
