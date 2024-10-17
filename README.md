@@ -12,7 +12,14 @@ flask --app main run
 ```
 
 There are some images from the app: 
+<p float="left">
+  <img src="https://github.com/cigdeemtok/FlaskScholarSearchApp/blob/main/images/scholar_flask_homepage.png" width="75%" /><br>
+  <img src="https://github.com/cigdeemtok/FlaskScholarSearchApp/blob/main/images/scholar_flask_details.png" width="75%" />
+</p>
 
-
+This is the database structure: 
+<p float="left">
+  <img src="https://github.com/cigdeemtok/FlaskScholarSearchApp/blob/main/images/scholar_flask_database.png" width="75%" />
+</p>
 
 I hope you find this project helpful. Any feedback is appreciated.
